@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tool.Controller">
+    <TextField fx:id="expressionTextField" layoutX="7.0" layoutY="105.0" prefHeight="25.0" prefWidth="200.0" promptText="Введите выражение" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="105.0" />
+    <TextArea fx:id="resultTextArea" layoutX="7.0" layoutY="238.0" prefHeight="113.0" prefWidth="442.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="238.0" />
+    <Button fx:id="goButton" layoutX="348.0" layoutY="144.0" mnemonicParsing="false" onAction="#goButton_onAction" prefHeight="55.0" prefWidth="102.0" text="Преобразовать" AnchorPane.leftAnchor="348.0" />
+    <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="456.0">
+        <Menu mnemonicParsing="false" text="Файл">
+            <!--<MenuItem fx:id="saveMenuItem" mnemonicParsing="false" text="Сохранить"/>-->
+            <MenuItem fx:id="saveAsMenuItem" mnemonicParsing="false" onAction="#saveAsMenuItem_onAction" text="Сохранить как..." />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <!--<MenuItem mnemonicParsing="false" text="Закрыть"/>-->
+        </Menu>
+        <Menu mnemonicParsing="false" text="Помощь">
+            <MenuItem fx:id="aboutProgramMenuItem" mnemonicParsing="false" onAction="#aboutProgramMenuItem_onAction" text="О программе" />
+        </Menu>
+    </MenuBar>
+    <Label layoutX="213.0" layoutY="108.0" text="≡" AnchorPane.leftAnchor="213.0" AnchorPane.topAnchor="108.0" />
+    <TextField fx:id="resultRNSTextField" editable="false" layoutX="228.0" layoutY="105.0" prefHeight="25.0" prefWidth="100.0" promptText="Результат" AnchorPane.leftAnchor="228.0" AnchorPane.topAnchor="105.0" />
+    <Spinner fx:id="nSpinner" layoutX="87.0" layoutY="49.0" prefHeight="25.0" prefWidth="50.0" />
+    <Label layoutX="109.0" layoutY="32.0" text="n" />
+    <Label layoutX="170.0" layoutY="32.0" text="Система модулей" />
+    <TextField fx:id="modSystemTextField" editable="false" layoutX="144.0" layoutY="49.0" />
+    <TextField fx:id="maxValueModSystemTextField" editable="false" layoutX="300.0" layoutY="49.0" />
+    <Label layoutX="320.0" layoutY="32.0" text="Диапазон значений" />
+    <Label layoutX="233.0" layoutY="88.0" text="Результат в СОК" />
+    <Label layoutX="355.0" layoutY="88.0" text="Результат в ПСС" />
+    <TextField fx:id="resultPNSTextField" editable="false" layoutX="349.0" layoutY="105.0" prefHeight="25.0" prefWidth="100.0" promptText="Результат" AnchorPane.topAnchor="105.0">
+        <opaqueInsets>
+          <Insets />
+        </opaqueInsets>
+    </TextField>
+    <Label layoutX="334.0" layoutY="108.0" text="=" />
+    <Label layoutX="56.0" layoutY="88.0" text="Выражение в ПСС" />
+    <Separator layoutY="80.0" prefHeight="4.0" prefWidth="456.0" />
+    <Separator layoutY="136.0" prefHeight="4.0" prefWidth="456.0" />
+    <Slider fx:id="slider" blockIncrement="1.0" layoutX="27.0" layoutY="55.0" majorTickUnit="1.0" max="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="39.0" snapToTicks="true" />
+    <Label fx:id="sliderLabel" layoutX="35.0" layoutY="32.0" text="Авто" />
+    <Label layoutX="7.0" layoutY="147.0" text="Число в ПСС" />
+    <Label layoutX="7.0" layoutY="178.0" text="Число в СОК" />
+    <TextField fx:id="numberPNSTextField" layoutX="84.0" layoutY="144.0" prefHeight="25.0" prefWidth="123.0" />
+    <TextField fx:id="numberRNSTextField" layoutX="84.0" layoutY="175.0" prefHeight="25.0" prefWidth="123.0" />
+    <Separator layoutY="205.0" prefHeight="4.0" prefWidth="456.0" />
+    <Separator layoutX="337.0" layoutY="138.0" orientation="VERTICAL" prefHeight="69.0" prefWidth="0.0" />
+    <Label layoutX="213.0" layoutY="147.0" text="=" />
+    <Label layoutX="213.0" layoutY="178.0" text="=" />
+    <TextField fx:id="resultPNSToRNSTextField" editable="false" layoutX="228.0" layoutY="144.0" prefHeight="25.0" prefWidth="100.0" promptText="Результат" />
+    <TextField fx:id="resultRNSToPNSTextField" editable="false" layoutX="228.0" layoutY="175.0" prefHeight="25.0" prefWidth="100.0" promptText="Результат" />
+    <Label layoutX="197.0" layoutY="214.0" text="Результаты" />
+</AnchorPane>
