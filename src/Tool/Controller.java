@@ -84,6 +84,9 @@ public class Controller {
 		SpinnerValueFactory<Integer> valueFactory =
 				new SpinnerValueFactory.IntegerSpinnerValueFactory(minValue, maxValue, minValue);
 		nSpinner.setValueFactory(valueFactory);
+		//Добавляем изменения
+		textChange(modSystemTextField); //Подписываем modSystemTextField на слушателя события изменения текста.
+		//Старый код
 		textChange(expressionTextField);
 		textChange(numberPNSTextField);
 		textChange(numberRNSTextField);
